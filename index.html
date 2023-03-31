@@ -24,10 +24,10 @@
                 Productos
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Flores y arbustos</a></li>
-                <li><a class="dropdown-item" href="#">Tierra de hojas</a></li>
+                <li><a class="dropdown-item" href="productos.html">Flores y arbustos</a></li>
+                <li><a class="dropdown-item" href="productos.html">Tierra de hojas</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Maceteros</a></li>
+                <li><a class="dropdown-item" href="productos.html">Maceteros</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -36,6 +36,9 @@
             <li class="nav-item">
               <a class="nav-link" href="suscripcion.html">Suscríbete</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="miperfil.html">Mi perfil</a>
+          </li>
           </ul>
         </div>
         <a class="nav-link" href="iniciosesion.html">Iniciar Sesión</a>
@@ -78,42 +81,100 @@
     </div>
     <hr><br>
     <!--Inicio cards-->
-    <div class="container-fluid">
-      <div class="row container-fluid">
-        <div class="col-sm-4">
-          <div class="card" style="width: 18rem;">
-            <img src="img/flor2.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Embellecer el entorno. Añade color y vida a tu hogar.</p>
-            </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="img/flor2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Amapola</h5>
+            <p class="card-text">Embellece tu hogar.</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="card" style="width: 18rem;">
-            <img src="img/bambu.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bambú</h5>
-              <p class="card-text">Embellecer el entorno. Añade color y vida a tu hogar.</p>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/bambu.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bambú</h5>
+            <p class="card-text">Embellece tu hogar.</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="card" style="width: 18rem;">
-            <img src="img/tierra.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Tierra</h5>
-              <p class="card-text">Embellecer el entorno. Añade color y vida a tu hogar.</p>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/tierra.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tierra</h5>
+            <p class="card-text">Revive tus plantas con la mejor tierra.</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
           </div>
         </div>
       </div>
     </div>
+    <!--Fin cards-->
+
     <br><hr>
     <div class="container text-center">
       <h1>Productos nuevos</h1>
     </div>
     <hr><br>
-    
+    <!--Inicio cards-->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="img/florespora.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Flor espora</h5>
+            <p class="card-text">Embellece tu hogar.</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/arbusto_muerto3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Arbusto muerto</h5>
+            <p class="card-text">Embellece tu hogar.</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/arena.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Arena</h5>
+            <p class="card-text">Decora tus plantas con la mejor arena.</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin cards-->
+    <!--Estilo y footer-->
+    <style>
+      footer {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      footer a {
+        color: #333;
+      }
+    </style>
+    <div class="container">
+      <footer>
+        <p>Botania Copyright© 2023</p>
+        <p><a href="nosotros.html">Síguenos en nuestras redes sociales</a></p>
+        <a href="#top">Volver arriba</a>
+      </footer>
+    </div>
+    <!--Fin estilo y footer-->
+
     <!-- Incluye jQuery y Bootstrap JS justo antes de cerrar el body -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
