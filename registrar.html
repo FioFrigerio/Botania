@@ -68,7 +68,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 container-fluid">
-        <form action="#" method="post">
+        <form action="index.html" method="post">
           <div class="mb-3">
             <label for="username" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="InputName" placeholder="Ej: Carlos">
@@ -94,7 +94,7 @@
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Está de acuerdo con los términos y condiciones</label>
           </div>
-          <button type="submit" class="btn btn-primary" id="btnCrearUsuario">Crear usuario</button>
+          <button type="button" class="btn btn-primary" id="btnCrearUsuario">Crear usuario</button>
         </form>
       </div>
     </div>
@@ -131,7 +131,7 @@
       $("#btnCrearUsuario").click(function () {
           //alert("Boton funcionando")
           var user = $("#InputName").val();
-          var Apellido = $("InputApellido").val();
+          var apellido = $("InputApellido").val();
           var pass = document.getElementById("InputPassword").value;
           var mail = $("#InputCorreo").val();
           var telefono = $("#InputFonos").value;
