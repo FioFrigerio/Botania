@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,8 @@
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -21,13 +23,16 @@
             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="productos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="productos.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Productos
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="productos.html">Flores y arbustos</a></li>
               <li><a class="dropdown-item" href="productos.html">Tierra de hojas</a></li>
-              <li><hr class="dropdown-divider"></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
               <li><a class="dropdown-item" href="productos.html">Maceteros</a></li>
             </ul>
           </li>
@@ -39,7 +44,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="miperfil.html">Mi perfil</a>
-        </li>
+          </li>
         </ul>
       </div>
       <a class="nav-link" href="iniciosesion.html">Iniciar Sesión</a>
@@ -54,34 +59,36 @@
   </div>
   <!--logo_centro-->
   <div class="container text-center">
-    <br><hr>
+    <br>
+    <hr>
     <h1>Registrarse</h1>
     <br>
-</div>
+  </div>
   <!--box ingreso sesión-->
   <div class="container">
     <div class="row">
       <div class="col-sm-6 container-fluid">
-        <form action="index.html" >
+        <form action="#" method="post">
           <div class="mb-3">
-            <label class="form-label">Nombre</label>
-            <input type="Nombre" class="form-control" id="InputName">
+            <label for="username" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="InputName" placeholder="Ej: Carlos">
           </div>
           <div class="mb-3">
-            <label class="form-label">Apellido</label>
-            <input type="Apellido" class="form-control" id="InputLastName">
+            <label for="username" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="InputApellido" placeholder="Ej: Perez">
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="InputCorreo" aria-describedby="emailHelp">
+            <label for="mail" class="form-label">Email</label>
+            <input type="text" class="form-control" id="InputEmail" aria-describedby="emailHelp"
+              placeholder="ejemplo@mail.com">
           </div>
           <div class="mb-3">
-            <label class="form-label">Telefono</label>
-            <input type="Telefono" class="form-control" id="InputFonos">
+            <label for="telefono" class="form-label">Telefono</label>
+            <input type="text" class="form-control" id="InputFono" placeholder="Ej: 912344567">
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Clave</label>
-            <input type="password" class="form-control" id="InputPassword">
+            <label for="password1" class="form-label">Clave</label>
+            <input type="password" class="form-control" id="InputPassword" placeholder="Ingrese clave">
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -93,98 +100,100 @@
     </div>
   </div>
   <!--box ingreso sesión-->
-    <!--Estilo y footer-->
-    <style>
-      footer {
-        background-color: #f2f2f2;
-        padding: 10px;
-        text-align: center;
-        margin-top: 50px;
-      }
-      footer a {
-        color: #333;
-      }
-    </style>
-    <div class="container">
-      <footer>
-        <p>Botania Copyright© 2023</p>
-        <p><a href="nosotros.html">Síguenos en nuestras redes sociales</a></p>
-        <a href="#top">Volver arriba</a>
-      </footer>
-    </div>
-    <!--Fin estilo y footer-->
+  <!--Estilo y footer-->
+  <style>
+    footer {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px;
+    }
 
-    <!-- Incluye jQuery y Bootstrap JS justo antes de cerrar el body -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/Codigo.js"></script>
-  </body>
-  <script>
-    $(document).ready(function () {
-        $("#btnCrearUsuario").click(function () {
-            //alert("Boton funcionando")
-            var user = $("#InputName").val();
-            var Apellido = $("InputApellido").val();
-            var pass = document.getElementById("InputPassword").value;
-            var mail = $("#InputCorreo").val();
-            var telefono = $("#InputFonos").value;
-            var res = true
-            const numeroTelefono = "+56 9 12345678";
-            const regexTelefono = /^\+56\s?9\d{8}$/;
-            const esNumeroTelefonoValido = regexTelefono.test(numeroTelefono);
+    footer a {
+      color: #333;
+    }
+  </style>
+  <div class="container">
+    <footer>
+      <p>Botania Copyright© 2023</p>
+      <p><a href="nosotros.html">Síguenos en nuestras redes sociales</a></p>
+      <a href="#top">Volver arriba</a>
+    </footer>
+  </div>
+  <!--Fin estilo y footer-->
+
+  <!-- Incluye jQuery y Bootstrap JS justo antes de cerrar el body -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script>
+  $(document).ready(function () {
+      $("#btnCrearUsuario").click(function () {
+          //alert("Boton funcionando")
+          var user = $("#InputName").val();
+          var Apellido = $("InputApellido").val();
+          var pass = document.getElementById("InputPassword").value;
+          var mail = $("#InputCorreo").val();
+          var telefono = $("#InputFonos").value;
+          var res = true
+          const numeroTelefono = "+56 9 12345678";
+          const regexTelefono = /^\+56\s?9\d{8}$/;
+          const esNumeroTelefonoValido = regexTelefono.test(numeroTelefono);
 
 
-            if (user.length == 0) {
-                res = false;
-                $("#InputName").css("border","3px solid red")
-            }else{
-                
-                $("#InputName").css("border","1px solid black")
-            }
-
-            if(Apellido.length == 0){
+          if (user.length == 0) {
               res = false;
-              $("InputApellido").css("border", "3px solid red")
-            }else{
-              $("InputApellido").css("border", "1px solid black")
-            }
+              $("#InputName").css("border","3px solid red")
+          }else{
+              
+              $("#InputName").css("border","1px solid black")
+          }
 
-            if (pass.length < 10) {
-                res = false;
-                $("#password").css("border","3px solid red")
-            }else{
-                
-                $("#password").css("border","1px solid black")
-            }
+          if(Apellido.length == 0){
+            res = false;
+            $("InputApellido").css("border", "3px solid red")
+          }else{
+            $("InputApellido").css("border", "1px solid black")
+          }
 
-            if (mail.includes("@", 0)) {
-                
-                $("#correo").css("border","1px solid black")
-            } else {
-            if (esNumeroTelefonoValido) {
-                console.log("El número de teléfono es válido.");
-            } else {
-                console.log("El número de teléfono no es válido.");
-            }
+          if (pass.length < 10) {
+              res = false;
+              $("#Inputpassword").css("border","3px solid red")
+          }else{
+              
+              $("#Inputpassword").css("border","1px solid black")
+          }
 
-            }
+          if (mail.includes("@", 0)) {
+              
+              $("#Inputcorreo").css("border","1px solid black")
+          } else {
+          if (esNumeroTelefonoValido) {
+              console.log("El número de teléfono es válido.");
+          } else {
+              console.log("El número de teléfono no es válido.");
+          }
 
-            if (res) {
-                $("#alerta").attr("hidden",false)
-                $("#alerta").attr("class","alert alert-success col-md-4")
-                $("#resultado").text("Usuario Conectado")  
-            } else {
-                $("#alerta").attr("hidden",false)
-                $("#alerta").attr("class","alert alert-danger col-md-4")
-                $("#resultado").text("Error al ingresar datos")  
-            }
+          }
 
-            //console.log(pass)
-            //$("#alerta").attr("hidden",false)
-            //$("#alerta").attr("class","alert alert-success col-md-4");
-            //$("#resultado").css("color","Black")
-            //$("#resultado").text("Usuario Conectado")
-        })
-    })
+          if (res) {
+              $("#alerta").attr("hidden",false)
+              $("#alerta").attr("class","alert alert-success col-md-4")
+              $("#resultado").text("Usuario Conectado")  
+          } else {
+              $("#alerta").attr("hidden",false)
+              $("#alerta").attr("class","alert alert-danger col-md-4")
+              $("#resultado").text("Error al ingresar datos")  
+          }
+
+          //console.log(pass)
+          //$("#alerta").attr("hidden",false)
+          //$("#alerta").attr("class","alert alert-success col-md-4");
+          //$("#resultado").css("color","Black")
+          //$("#resultado").text("Usuario Conectado")
+      })
+  })
 </script>
+
+
 </html>
