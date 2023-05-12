@@ -62,26 +62,26 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 container-fluid">
-        <form action="index.html" method="post">
+        <form action="index.html" >
           <div class="mb-3">
-            <label for="username" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="InputName" placeholder="Ej: Carlos">
+            <label class="form-label">Nombre</label>
+            <input type="Nombre" class="form-control" id="InputName">
           </div>
           <div class="mb-3">
-            <label for="username" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="InputLastName" placeholder="Ej: Perez">
+            <label class="form-label">Apellido</label>
+            <input type="Apellido" class="form-control" id="InputLastName">
           </div>
           <div class="mb-3">
-            <label for="mail" class="form-label">Email</label>
-            <input type="text" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="ejemplo@mail.com">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="InputCorreo" aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
-            <label for="telefono" class="form-label">Telefono</label>
-            <input type="text" class="form-control" id="InputFono" placeholder="Ej: 912344567">
+            <label class="form-label">Telefono</label>
+            <input type="Telefono" class="form-control" id="InputFonos">
           </div>
           <div class="mb-3">
-            <label for="password1" class="form-label">Clave</label>
-            <input type="password" class="form-control" id="InputPassword" placeholder="Ingrese clave">
+            <label for="exampleInputPassword1" class="form-label">Clave</label>
+            <input type="password" class="form-control" id="InputPassword">
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -117,8 +117,74 @@
     <!-- Incluye jQuery y Bootstrap JS justo antes de cerrar el body -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/Codigo.js"></script>
   </body>
+  <script>
+    $(document).ready(function () {
+        $("#btnCrearUsuario").click(function () {
+            //alert("Boton funcionando")
+            var user = $("#InputName").val();
+            var Apellido = $("InputApellido").val();
+            var pass = document.getElementById("InputPassword").value;
+            var mail = $("#InputCorreo").val();
+            var telefono = $("#InputFonos").value;
+            var res = true
+            const numeroTelefono = "+56 9 12345678";
+            const regexTelefono = /^\+56\s?9\d{8}$/;
+            const esNumeroTelefonoValido = regexTelefono.test(numeroTelefono);
 
 
+            if (user.length == 0) {
+                res = false;
+                $("#InputName").css("border","3px solid red")
+            }else{
+                
+                $("#InputName").css("border","1px solid black")
+            }
 
+            if(Apellido.length == 0){
+              res = false;
+              $("InputApellido").css("border", "3px solid red")
+            }else{
+              $("InputApellido").css("border", "1px solid black")
+            }
+
+            if (pass.length < 10) {
+                res = false;
+                $("#password").css("border","3px solid red")
+            }else{
+                
+                $("#password").css("border","1px solid black")
+            }
+
+            if (mail.includes("@", 0)) {
+                
+                $("#correo").css("border","1px solid black")
+            } else {
+            if (esNumeroTelefonoValido) {
+                console.log("El número de teléfono es válido.");
+            } else {
+                console.log("El número de teléfono no es válido.");
+            }
+
+            }
+
+            if (res) {
+                $("#alerta").attr("hidden",false)
+                $("#alerta").attr("class","alert alert-success col-md-4")
+                $("#resultado").text("Usuario Conectado")  
+            } else {
+                $("#alerta").attr("hidden",false)
+                $("#alerta").attr("class","alert alert-danger col-md-4")
+                $("#resultado").text("Error al ingresar datos")  
+            }
+
+            //console.log(pass)
+            //$("#alerta").attr("hidden",false)
+            //$("#alerta").attr("class","alert alert-success col-md-4");
+            //$("#resultado").css("color","Black")
+            //$("#resultado").text("Usuario Conectado")
+        })
+    })
+</script>
 </html>
