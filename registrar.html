@@ -71,6 +71,7 @@
       <div class="col-sm-6 container-fluid">
         <form class="row g-3 needs-validation" novalidate>
           <div class="row g-3">
+            
             <div class="col-md-6">
               <label for="username" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="nombre" placeholder="Ej: Carlos" required>
@@ -78,94 +79,109 @@
                 No puede quedar vacío
               </div>
             </div>
+            
             <div class="col-md-6">
-              <label for="username" class="form-label">Apellido</label>
+              <label for="username" class="form-label">Apellido Paterno</label>
               <input type="text" class="form-control" id="Apellido" placeholder="Ej: Perez" required>
               <div class="invalid-feedback">
                 No puede quedar vacío
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <label for="telefono" class="form-label">Telefono</label>
-            <input type="text" class="form-control" id="fono" placeholder="Ej: 912344567" required>
-            <div class="invalid-feedback">
-              No puede quedar vacío
-            </div>
-          </div>
-          <div class="col-12">
-            <label for="mail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-              placeholder="ejemplo@mail.com" required>
-            <div class="invalid-feedback">
-              No puede quedar vacío
-            </div>
-          </div>
-          <div class="col-12">
-            <label for="password" class="form-label">Clave</label>
-            <input type="password" class="form-control" id="password" placeholder="Ingrese clave" required>
-            <div class="invalid-feedback">
-              No puede quedar vacío
-            </div>
-          </div>
-          <div class="col-12">
-            <label for="direccion" class="form-label">Direccion</label>
-            <input type="text" class="form-control" id="direccion" placeholder="Ej: Antonio Varas 666" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              No puede quedar vacío
-            </div>
-          </div>
 
-          <label for="cboRegiones">Region</label>
-        <select
-          name="cboRegiones"
-          id="cboRegiones"
-          class="form-select mb-3 col-md-4">
-          <option value="" disable hidden>Seleccione una opcion</option>
-        </select>
-        <label for="cboProvincias">Provincias</label>
-        <select
-          name="cboProvincias"
-          id="cboProvincias"
-          class="form-select mb-3 col-md-4" disabled>
-          <option value="" disable hidden>Seleccione una opcion</option>
-        </select>
-        <label for="cboComunas">Comunas</label>
-        <select
-          name="cboComunas"
-          id="cboComunas"
-          class="form-select mb-3 col-md-4" disabled>
-          <option value="" disable hidden>Seleccione una opcion</option>
-        </select>
-          <option value="" disable hidden>Seleccione una opcion</option>
-        </select>
-            <div class="invalid-feedback">
-              No puede quedar vacío
-            </div>
-          </div>
-          <div class="col-md-6">
-            <label for="codigoPostal" class="form-label">Codigo postal</label>
-            <input type="text" class="form-control" id="codigoPostal" placeholder="123456" required>
-            <div class="invalid-feedback">
-              No puede quedar vacío
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck" required>
-              <label class="form-check-label" for="gridCheck">
-                Acepta los términos y condiciones
-              </label>
+            <div class="col-md-6">
+              <label for="username" class="form-label">Apellido Materno</label>
+              <input type="text" class="form-control" id="Apellido" placeholder="Ej: Gomez" required>
               <div class="invalid-feedback">
-                Debe aceptar los terminos y condiciones
+                No puede quedar vacío
               </div>
             </div>
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary" onclick="enviarformulario()" id="btnCrearUsuario" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear usuario</button>
+          
+
+            <div class="col-md-6">
+              <label for="telefono" class="form-label">Telefono</label>
+              <input type="text" class="form-control" id="fono" placeholder="Ej: 912344567" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="mail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="ejemplo@mail.com" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="password" class="form-label">Clave</label>
+              <input type="password" class="form-control" id="password" placeholder="Ingrese clave" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="direccion" class="form-label">Direccion</label>
+              <input type="text" class="form-control" id="direccion" placeholder="Ej: Antonio Varas 666" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <label for="cboRegiones">Region</label>
+              <select
+                name="cboRegiones"
+                id="cboRegiones"
+                class="form-select mb-3 col-md-4">
+                <option value="" disable hidden>Seleccione una opcion</option>
+              </select>
+            <label for="cboProvincias">Provincia</label>
+            <select
+                name="cboProvincias"
+                id="cboProvincias"
+                class="form-select mb-3 col-md-4" disabled>
+                <option value="" disable hidden>Seleccione una opcion</option>
+            </select>
+              <label for="cboComunas">Comuna</label>
+                <select
+                  name="cboComunas"
+                  id="cboComunas"
+                  class="form-select mb-3 col-md-4" disabled>
+                  <option value="" disable hidden>Seleccione una opcion</option>
+                </select>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            
+
+            <div class="col-md-6">
+              <label for="codigoPostal" class="form-label">Codigo postal</label>
+              <input type="text" class="form-control" id="codigoPostal" placeholder="123456" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+          
+            <div class="col-md-7">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                <label class="form-check-label" for="gridCheck">
+                  Acepta los términos y condiciones
+                </label> 
+                <div class="invalid-feedback">
+                  Debe aceptar los terminos y condiciones
+                </div>
+              </div>
+            </div><br><br>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary" onclick="enviarformulario()" id="btnCrearUsuario" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear usuario</button>
+            </div>
           </div>
         </form>
       </div>
