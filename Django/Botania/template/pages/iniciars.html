@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    {% load bootstrap5 %}
+    {% load static %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript%}
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mt-5 text-center mx-auto fw-bolder">
+                <form action="" method='POST'>
+                    {% csrf_token %}
+                    <img src="{% static 'img/test2.gif'%}" class='img-thumbnail w-25 h-50 rounded-circle '
+                        alt="Cargando..."><br>
+                    <label for="username" class='form-label'>Correo</label>
+                    <input type="text" name="username" id="username" class='form-control'
+                        placeholder="Ingrese su Usuario">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" name="password" id="password" class='form-control'
+                        placeholder="Ingrese su contraseña"><br>
+                    <input type="submit" value="Conectar" class='btn btn-success'>
+                </form><br>
+
+                {% if mensaje %}
+                {{mensaje}}
+                {% endif%}
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

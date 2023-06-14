@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript%}
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto p-5 text-center">
+                <h1>Crear Usuario</h1><br>
+                <form action="userAdd" method="POST">
+                    {% csrf_token %}
+                    <div class="container">
+                        <div class="row">
+                          <div class="col-sm-6 container-fluid">
+                            <form class="row g-3 needs-validation" novalidate>
+                              <div class="row g-3">
+                                
+                                <div class="col-md-6">
+                                  <label for="username" class="form-label">Nombre</label>
+                                  <input type="text" class="form-control" id="nombre" placeholder="Ej: Carlos" required>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                  <label for="username" class="form-label">Apellido Paterno</label>
+                                  <input type="text" class="form-control" id="Apellido" placeholder="Ej: Perez" required>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                </div>
+                    
+                                <div class="col-md-6">
+                                  <label for="username" class="form-label">Apellido Materno</label>
+                                  <input type="text" class="form-control" id="Apellido" placeholder="Ej: Gomez" required>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                </div>
+                              
+                    
+                                <div class="col-md-6">
+                                  <label for="telefono" class="form-label">Telefono</label>
+                                  <input type="text" class="form-control" id="fono" placeholder="Ej: 912344567" required>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                </div>
+                    
+                                <div class="col-12">
+                                  <label for="mail" class="form-label">Email</label>
+                                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    placeholder="ejemplo@mail.com" required>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                </div>
+                    
+                                <div class="col-md-6">
+                                  <label for="password" class="form-label">Clave</label>
+                                  <input type="password" class="form-control" id="password" placeholder="Ingrese clave" required>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                </div>
+                    
+                                <div class="col-12">
+                                  <label for="direccion" class="form-label">Direccion</label>
+                                  <input type="text" class="form-control" id="direccion" placeholder="Ej: Antonio Varas 666" required>
+                                  <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                </div>
+                    
+                                <label for="cboRegiones">Region</label>
+                                  <select
+                                    name="cboRegiones"
+                                    id="cboRegiones"
+                                    class="form-select mb-3 col-md-4">
+                                    <option value="" disable hidden>Seleccione una opcion</option>
+                                  </select>
+                                <label for="cboProvincias">Provincia</label>
+                                <select
+                                    name="cboProvincias"
+                                    id="cboProvincias"
+                                    class="form-select mb-3 col-md-4" disabled>
+                                    <option value="" disable hidden>Seleccione una opcion</option>
+                                </select>
+                                  <label for="cboComunas">Comuna</label>
+                                    <select
+                                      name="cboComunas"
+                                      id="cboComunas"
+                                      class="form-select mb-3 col-md-4" disabled>
+                                      <option value="" disable hidden>Seleccione una opcion</option>
+                                    </select>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                
+                    
+                                <div class="col-md-6">
+                                  <label for="codigoPostal" class="form-label">Codigo postal</label>
+                                  <input type="text" class="form-control" id="codigoPostal" placeholder="123456" required>
+                                  <div class="invalid-feedback">
+                                    No puede quedar vacío
+                                  </div>
+                                </div>
+                              
+                                <div class="col-md-7">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                                    <label class="form-check-label" for="gridCheck">
+                                      Acepta los términos y condiciones
+                                    </label> 
+                                    <div class="invalid-feedback">
+                                      Debe aceptar los terminos y condiciones
+                                    </div>
+                                  </div>
+                                </div><br><br><br><br>
+                    <input type="submit" name="opcion" value="Crear usuario" class="btn btn-success">
+                    <a href="{% url 'crud' %}"><button type="button" class="btn btn-secondary">Atrás</button></a>
+                </form><br><br>
+                <div id="idMensajes">
+                    {% if mensaje%}
+                    {{mensaje}}
+                    {% endif%}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+          'use strict'
+    
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          const forms = document.querySelectorAll('.needs-validation')
+    
+          // Loop over them and prevent submission
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+    
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
+      </script>
+      
+      <!-- Incluye jQuery y Bootstrap JS justo antes de cerrar el body -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="js/Codigo.js"></script>
+      <script src="js/Api2.js"></script>
+    </body>
+</body>
+
+</html>
