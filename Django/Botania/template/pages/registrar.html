@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse</title>
+  <link rel="stylesheet" href="bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-5.3.0-alpha2-dist/css/style.css">
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="productos.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Productos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="productos.html">Flores y arbustos</a></li>
+              <li><a class="dropdown-item" href="productos.html">Tierra de hojas</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="productos.html">Maceteros</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="suscripcion.html">Suscríbete</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="miperfil.html">Mi perfil</a>
+          </li>
+        </ul>
+      </div>
+      <a class="nav-link" href="iniciosesion.html">Iniciar Sesión</a>
+    </div>
+  </nav>
+  <!-- Fin Navbar-->
+  <!--logo_centro-->
+  <div id="header_logo" class="col text-center">
+    <a href="index.html" title="Botania">
+      <img class="logo_img" src="img/logo.png" alt="Bootstrap" width="100" height="150">
+    </a>
+  </div>
+  <!--logo_centro-->
+  <div class="container text-center">
+    <br>
+    <hr>
+    <h1>Registrarse</h1>
+    <br>
+  </div>
+  <!--box ingreso sesión-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 container-fluid">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="row g-3">
+            
+            <div class="col-md-6">
+              <label for="username" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Ej: Carlos" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="username" class="form-label">Apellido Paterno</label>
+              <input type="text" class="form-control" id="Apellido" placeholder="Ej: Perez" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="username" class="form-label">Apellido Materno</label>
+              <input type="text" class="form-control" id="Apellido" placeholder="Ej: Gomez" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+          
+
+            <div class="col-md-6">
+              <label for="telefono" class="form-label">Telefono</label>
+              <input type="text" class="form-control" id="fono" placeholder="Ej: 912344567" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="mail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="ejemplo@mail.com" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="password" class="form-label">Clave</label>
+              <input type="password" class="form-control" id="password" placeholder="Ingrese clave" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="direccion" class="form-label">Direccion</label>
+              <input type="text" class="form-control" id="direccion" placeholder="Ej: Antonio Varas 666" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+
+            <label for="cboRegiones">Region</label>
+              <select
+                name="cboRegiones"
+                id="cboRegiones"
+                class="form-select mb-3 col-md-4">
+                <option value="" disable hidden>Seleccione una opcion</option>
+              </select>
+            <label for="cboProvincias">Provincia</label>
+            <select
+                name="cboProvincias"
+                id="cboProvincias"
+                class="form-select mb-3 col-md-4" disabled>
+                <option value="" disable hidden>Seleccione una opcion</option>
+            </select>
+              <label for="cboComunas">Comuna</label>
+                <select
+                  name="cboComunas"
+                  id="cboComunas"
+                  class="form-select mb-3 col-md-4" disabled>
+                  <option value="" disable hidden>Seleccione una opcion</option>
+                </select>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            
+
+            <div class="col-md-6">
+              <label for="codigoPostal" class="form-label">Codigo postal</label>
+              <input type="text" class="form-control" id="codigoPostal" placeholder="123456" required>
+              <div class="invalid-feedback">
+                No puede quedar vacío
+              </div>
+            </div>
+          
+            <div class="col-md-7">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                <label class="form-check-label" for="gridCheck">
+                  Acepta los términos y condiciones
+                </label> 
+                <div class="invalid-feedback">
+                  Debe aceptar los terminos y condiciones
+                </div>
+              </div>
+            </div><br><br>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary" onclick="enviarformulario()" id="btnCrearUsuario" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear usuario</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear usuario</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Asegúrese de tener sus datos correctos
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atrás</button>
+        <button type="button" class="btn btn-primary">Crear usuario</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="alert alert-success" role="alert">
+  Revisa los datos
+
+<div id="error">
+</div> 
+</div>
+</div>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+  <!--box ingreso sesión-->
+  <!--Estilo y footer-->
+  <style>
+    footer {
+      background-color: #bff3c5;
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #333;
+    }
+  </style>
+  <div class="container">
+    <footer>
+      <p>Botania Copyright© 2023</p>
+      <p><a href="nosotros.html">Síguenos en nuestras redes sociales</a></p>
+      <a href="#top">Volver arriba</a>
+    </footer>
+  </div>
+  <!--Fin estilo y footer-->
+
+  <!-- Incluye jQuery y Bootstrap JS justo antes de cerrar el body -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="js/Codigo.js"></script>
+  <script src="js/Api2.js"></script>
+</body>
+
+
+</html>
